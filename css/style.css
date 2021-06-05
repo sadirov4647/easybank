@@ -1,0 +1,283 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+:root {
+    --body-color: #9597A5;
+    --linear-color: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+    --green-color:#30C88F;
+    --text-color:#2D314D;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Public Sans', "Arial", sans-serif;
+    font-display: swap;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--body-color);
+}
+
+.usual{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--body-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.container {
+    max-width: 1150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-link{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--body-color);
+}
+
+.nav-item a:active{
+    color:var(--text-color);
+    border-bottom: 2px solid var(--green-color);
+}
+.nav-btn{
+    padding: 8px 33px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+    cursor: pointer;
+    white-space: nowrap;
+}
+.nav-btn:active{
+    opacity: 0.4;
+}
+.navbar span{
+    background: url(/images/toggle/toggler-open.png) no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+.jumbotron{
+    position: relative;
+    padding: 6rem 2rem !important;
+}
+.hero-text{
+    padding-top: 170px;
+    padding-bottom: 55px;
+    max-width: 447px;
+}
+.hero-right{
+    background:#F2F2F2;
+    display: block;
+    position: absolute;
+    background: url(/images/header/hero-bg-img.png) no-repeat;
+    width: 820px;
+    height: 860px;
+    right: 0;
+    top: 0;
+}
+.hero-title{
+    font-weight: 100;
+    font-size: 56px;
+    line-height: 64px;
+    color: var(--text-color);
+}
+.why-choose{
+    padding-top: 95px;
+    padding-bottom: 95px;
+    background-color:#F4F5F7;
+}
+.why-choose-wrapper{
+    max-width: 635px;
+}
+.why-choose-title{
+    font-weight: 100;
+    font-size: 40px;
+    line-height: 64px;
+    color: var(--text-color);
+}
+.card{
+    max-width: 255px;
+}
+.card-wrapper .card{
+    background-color: transparent;
+}
+.article .card-title:active{
+    color:var(--green-color);
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+.card-body::before{
+    content:"";
+    background: url(/images/why/online.png) no-repeat;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 20px;
+}
+.card-title{
+    color:var(--text-color);
+}
+
+
+.article{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #F2F2F2;
+}
+.article-wrapper{
+    justify-content: space-between;
+}
+.article-title{
+    color:var(--text-color);
+    font-weight: 100;
+    font-size: 40px;
+    line-height: 64px;
+}
+.text-muted{
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 18px;
+}
+.article-card-text{
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color:var(--body-color);
+}
+.card-group{
+    justify-content: space-between;
+}
+footer{
+    padding: 48px 0;
+}
+.social-links a:not(:last-child){
+    margin-right: 13px;
+}
+.social-links a:active{
+    background-color:var(--green-color);
+}
+
+.btn-footer{
+    max-width: 163px;
+}
+.footer-link a{
+    color:#fff;
+}
+.footer-link a:hover{
+    color:var(--green-color);
+    text-decoration: none;
+}
+
+@media only screen and (max-width:1200px) {
+    .hero-text{
+        margin-top: 670px;
+    }    
+}
+
+@media only screen  and (max-width:992px){
+    .navbar-nav{
+        align-items:center;
+    }
+}
+
+@media only screen  and (max-width:745px) {
+    .hero-right{
+        background:url(/images/header/phones-mobile@2x.png) no-repeat;
+        left: 0;
+        width: 100%;
+        background-size: contain;
+    }
+    .hero-text{
+        margin-top: 400px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .hero-text{
+        margin-top: 300px;
+    }
+    .footer-link{
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .navbar .nav-btn{
+        display: flex;
+        margin: 0 auto;
+    }
+    small{
+        align-self: center;
+    }
+    .btn-footer{
+        align-self: center;
+    }
+    .row .footer-header{
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width:510px){
+    .card-wrapper{
+        justify-content: center;
+        text-align: center;
+    }
+    .why-choose-wrapper{
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .card-body::before{
+        align-self: center;
+    }
+    .article-title{
+        line-height: 48px;
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width:560px){
+    .article-wrapper{
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width:450px) {
+    .hero-text{
+        margin-top: 150px;
+    }    
+    .hero-text .hero-title{
+        font-size: 2.5rem;
+    }
+    .hero-text .hero-para{
+        font-size: 1rem;
+    }
+    
+}
